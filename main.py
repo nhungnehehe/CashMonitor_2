@@ -13,7 +13,7 @@ page2= Frame(root)
 page3= Frame(root)
 page4 = Frame(root)
 page5 = Frame(root)
-for i in (page1, page2, page3, page4):
+for i in (page1, page2, page3, page4, page5):
     i.grid(row=0, column=0, sticky='nsew')
 
 def show_frame(frame):
@@ -45,13 +45,13 @@ my_cv1= Canvas(page2, width=1000, height=650)
 my_cv1.pack(fill='both', expand=True)
 my_cv1.create_image(0,0, image=bg2, anchor="nw")
 bt2_1_img=ImageTk.PhotoImage(Image.open("bt2.2.png").resize((180,137),Image.LANCZOS))
-bt2_1= Button(page2, image= bt2_1_img, borderwidth=0, command= lambda: show_frame(page3))
+bt2_1= Button(page2, image= bt2_1_img, bg="#CFEBF9",highlightthickness=0, borderwidth=0, command= lambda: show_frame(page3))
 bt2_1.place(x=60, y=300)
 bt2_2_img= ImageTk.PhotoImage(Image.open("bt2.1.png").resize((180,137), Image.LANCZOS))
-bt2_2=Button(page2, image=bt2_2_img, borderwidth=0, command=lambda: show_frame(page4))
+bt2_2=Button(page2, image=bt2_2_img,bg="#CFEBF9", borderwidth=0, command=lambda: show_frame(page4))
 bt2_2.place(x=400, y=300)
 bt2_3_img = ImageTk.PhotoImage(Image.open("bt2.3.png").resize((180,137),Image.LANCZOS))
-bt2_3 = Button(page2, image=bt2_3_img, borderwidth=0, command=lambda: show_frame(page5))
+bt2_3 = Button(page2, image=bt2_3_img, bg="#CFEBF9", borderwidth=0, command=lambda: show_frame(page5))
 bt2_3.place(x=740, y=300)
 
 # Trang 3:
